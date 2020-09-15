@@ -1,0 +1,17 @@
+{
+  "name": "reservia",
+  "version": "1.0.0",
+  "author": "Freddy Escobar",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "stylelint-check": "stylelint-config-prettier-check"
+  },
+  "devDependencies": {
+    "prettier": "2.1.1",
+        "stylelint": "^13.7.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-prettier": "^8.0.2"
+  },
+  "dependencies": {}
+}
