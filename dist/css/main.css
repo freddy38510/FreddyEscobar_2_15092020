@@ -1,0 +1,254 @@
+/* Reset blocks */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+/* Reset list */
+ul {
+  list-style: none;
+}
+
+/* Reset form */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+/* Reset box sizing */
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Reset media */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/** Main **/
+html {
+  font-size: 16px;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5625;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 1.5625rem;
+  margin: 0;
+  outline: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #fff;
+  font-family: "Raleway";
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), opacity 0.4s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+
+.button:hover,
+.button:focus {
+  background: #deebff;
+}
+
+.button.is-text {
+  background: none;
+  color: #0065fc;
+}
+
+.button.is-text:hover,
+.button.is-text:focus {
+  background: #deebff;
+}
+
+/** Button on mobile **/
+/* Helpers */
+.has-text-blue {
+  color: #0065fc;
+}
+
+.blue-light {
+  color: #deebff;
+}
+
+.grey {
+  color: #f2f2f2;
+}
+
+.is-flex {
+  display: flex;
+}
+
+.is-wrap {
+  flex-wrap: wrap;
+}
+
+.is-flex.has-items-center {
+  align-items: center;
+}
+
+/** Header **/
+#header {
+  padding: 0 3.125rem;
+}
+
+#logo {
+  padding: 2.8125rem 0 1.875rem;
+  margin-right: auto;
+}
+
+#menu ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li {
+  position: relative;
+  line-height: 1.875;
+  padding: 2.8125rem 1.5625rem;
+  margin-right: 0.9375rem;
+}
+
+#menu ul li::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#menu ul li.is-active::before {
+  background: #0065fc;
+}
+
+#menu ul li.is-active a,
+#menu ul li.is-active a:visited {
+  color: #0065fc;
+}
+
+#menu ul li a {
+  text-decoration: none;
+}
+
+#menu ul li a:visited {
+  color: black;
+}
+
+/** header on mobile **/
+/** Header on tablet and desktop **/
+@media only screen and (max-width: 768px) {
+  .button {
+    padding: 1rem 1.25rem;
+  }
+  #header {
+    padding: 1.5625rem 0;
+  }
+
+  #logo {
+    padding: 0;
+    margin-left: 1.25rem;
+  }
+
+  #menu {
+    margin-top: 0.9375rem;
+    flex-basis: 100%;
+  }
+
+  #menu ul li {
+    width: 50%;
+    padding: 0;
+    text-align: center;
+    line-height: 2.9375;
+    margin: 0;
+  }
+
+  #menu ul li a {
+    display: block;
+  }
+
+  #menu ul li::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #f2f2f2;
+    position: absolute;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #menu ul li.is-active::before {
+    background: #0065fc;
+  }
+}
+@media only screen and (min-width: 769px) {
+  #header button {
+    order: 3;
+  }
+}
