@@ -1,0 +1,28 @@
+.is-flex {
+  display: flex;
+}
+
+.is-multiline {
+  flex-wrap: wrap;
+}
+
+.has-items-center {
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .is-hidden-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .is-hidden-desktop {
+    display: none;
+  }
+}
+
+.has-background-grey {
+  background: #f2f2f2;
+}
+

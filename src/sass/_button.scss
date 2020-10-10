@@ -1,0 +1,57 @@
+/* Buttons */
+.button {
+  display: inline-block;
+  box-sizing: content-box;
+  min-height: 1.5em;
+  border: 2px solid #0065fc;
+  border-radius: 0.75rem;
+  padding: 0.5em 0.875em;
+  margin: 0 0.375em;
+  outline: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #fff;
+  font-family: 'Raleway';
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1),
+    border-color 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+
+.button:first-child {
+  margin-left: 0;
+}
+
+.button:last-child {
+  margin-right: 0;
+}
+
+.button:hover,
+.button:focus {
+  background: adjust-color(#0069ed, $lightness: -4%);
+  border-color: adjust-color(#0069ed, $lightness: -4%);
+}
+
+.button.is-text {
+  background: none;
+  color: #0065fc;
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    background: #deebff;
+    border-color: #deebff;
+  }
+}
+
+.button.is-large {
+  font-size: 1.125rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    margin: 0 0.25em;
+  }
+}
