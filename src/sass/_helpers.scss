@@ -1,28 +1,92 @@
 .is-flex {
   display: flex;
+  flex-direction: column;
 }
 
 .is-multiline {
   flex-wrap: wrap;
 }
 
+.is-row {
+  flex-direction: row;
+}
+
 .has-items-center {
   align-items: center;
 }
 
-@media only screen and (max-width: 768px) {
-  .is-hidden-mobile {
-    display: none;
-  }
+.has-text-large {
+  font-size: 1.125rem;
 }
 
-@media only screen and (min-width: 769px) {
-  .is-hidden-desktop {
-    display: none;
-  }
+.has-text-small {
+  font-size: 0.875rem;
+}
+
+.has-text-bold {
+  font-weight: 700;
 }
 
 .has-background-grey {
   background: #f2f2f2;
 }
 
+.has-background-white {
+  background: white;
+}
+
+.is-hidden-mobile {
+  @include mobile {
+    display: none;
+  }
+}
+
+.is-hidden-tablet {
+  @include tablet {
+    display: none;
+  }
+}
+
+.is-hidden-desktop {
+  @include desktop {
+    display: none;
+  }
+}
+
+.is-rounded {
+  border-radius: 18px;
+}
+
+.is-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.info {
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  border: 1px solid #d9d9d9;
+  color: #0065fc;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+}
+
+.stars {
+  font-size: 0.75rem;
+  .fa-star {
+    color: #d9d9d9;
+    &.is-active {
+      color: #0065fc;
+    }
+  }
+}

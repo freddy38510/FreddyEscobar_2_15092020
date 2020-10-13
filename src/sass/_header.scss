@@ -1,12 +1,11 @@
-/** Header **/
 #header {
-  align-items: center;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 0 1.25rem 0;
 }
 
 #logo {
   display: flex;
   margin-right: auto;
+  margin-left: 1.25rem;
 }
 
 #menu {
@@ -14,7 +13,7 @@
 
   li {
     position: relative;
-    padding: 1.5rem;
+    padding: 1.75rem;
   }
 
   li::before {
@@ -23,7 +22,7 @@
     height: 2px;
     background: white;
     position: absolute;
-    top: -1.5rem;
+    top: -1.75rem;
     left: 0;
     right: 0;
   }
@@ -38,17 +37,8 @@
   }
 }
 
-/** header on mobile **/
-@media only screen and (max-width: 768px) {
-  #header {
-    padding: 1.5rem 0;
-  }
-
-  #logo {
-    margin-left: 1.25rem;
-  }
-
-  #menu {
+#menu {
+  @include mobile {
     margin: 0.75rem 0 0;
     flex-basis: 100%;
 
@@ -82,9 +72,8 @@
   }
 }
 
-/** Header on tablet and desktop **/
-@media only screen and (min-width: 769px) {
-  #signup {
+#signup {
+  @include tablet {
     order: 3;
   }
 }

@@ -1,0 +1,10 @@
+/* Breakpoints */
+$gap: 20px;
+
+$tablet: 769px;
+$desktop: 944px + (2 * $gap);
+$widescreen: 1136px + (2 * $gap);
+$fullhd: 1328px + (2 * $gap);
+
+$container-offset: (2 * $gap);
+$container-max-width: $fullhd;

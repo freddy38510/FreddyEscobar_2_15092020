@@ -1,0 +1,65 @@
+.field {
+  font-size: 1.125rem;
+  align-items: center;
+  display: flex;
+  position: relative;
+  margin-bottom: 1em;
+  width: 100%;
+
+  &.has-icon {
+    .input {
+      padding: 0.5rem 0.75em 0.5em 3.75em;
+    }
+    .input:hover,
+    .input:focus,
+    .input:active {
+      + .icon {
+        background: adjust-color(#f2f2f2, $lightness: -6%);
+      }
+    }
+    &.has-addon {
+      .input {
+        padding: 0.5em 1.5em 0.5em 3.75em;
+        border-radius: 15px 0 0 15px;
+      }
+    }
+  }
+
+  &.has-icon > .icon {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 0;
+    padding: 1.25em;
+    border-radius: 15px 0 0 15px;
+  }
+
+  &.has-addon > button {
+    align-self: stretch;
+    margin: 0 0 0 -15px;
+    border-radius: 15px;
+  }
+}
+
+.input {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  padding: 0.5em 0.75em;
+  border: 1px solid #f2f2f2;
+  border-radius: 12px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.input:hover,
+.input:focus,
+.input:active {
+  border-color: adjust-color(#f2f2f2, $lightness: -6%);
+}
+
+@include tablet {
+  .input,
+  .field {
+    width: auto;
+  }
+}

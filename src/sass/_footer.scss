@@ -1,0 +1,11 @@
+.footer-links-section {
+  padding: 1.25rem 0.75rem;
+
+  .title {
+    margin: 0 0 1.25rem 0;
+  }
+
+  ul li:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+}

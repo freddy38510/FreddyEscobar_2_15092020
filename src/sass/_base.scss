@@ -19,18 +19,40 @@ a:hover {
   color: #0065fc;
 }
 
-h1 {
+p {
+  margin: 1em 0;
+  &.has-text-small {
+    margin: 0.5em 0;
+  }
+}
+
+.title {
   font-size: 1.375rem;
   margin: 0.5em 0;
   font-weight: 700;
-}
 
-.container {
-  margin: 0 3rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .container {
-    margin: 0 1.25rem;
+  &.is-3 {
+    font-size: 1.125rem;
+    margin: 0.83333em 0;
   }
+
+  &.is-4 {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.sub-heading {
+  margin-top: 0.8125em;
+
+  @media only screen and (min-width: 769px) {
+    margin-top: -0.1875em;
+    margin-bottom: 0;
+  }
+}
+
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
 }

@@ -1,8 +1,24 @@
 @import 'reset';
+@import 'variables';
+@import 'mixins';
 @import 'base';
 @import 'helpers';
 @import 'button';
+@import 'form';
+@import 'cards';
+@import 'grid';
 @import 'header';
+@import 'footer';
 
-  }
+#filters {
+  margin-bottom: 1em;
+}
+
+#hostings {
+  background: transparent;
+  padding-bottom: 0;
+}
+
+#fort-de-pomegues img {
+  object-position: 0 42.5%;
 }
