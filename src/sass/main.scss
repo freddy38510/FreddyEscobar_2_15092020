@@ -6,19 +6,23 @@
 @import 'button';
 @import 'form';
 @import 'cards';
-@import 'grid';
+@import 'layout';
 @import 'header';
+@import 'popular';
+@import 'hostings';
+@import 'activities';
 @import 'footer';
 
-#filters {
-  margin-bottom: 1em;
-}
+main {
+  > .container {
+    @include until-lg {
+      padding: 0;
+    }
 
-#hostings {
-  background: transparent;
-  padding-bottom: 0;
-}
-
-#fort-de-pomegues img {
-  object-position: 0 42.5%;
+    > .row {
+        @include lg {
+            margin-bottom: 2rem;
+        }
+    }
+  }
 }

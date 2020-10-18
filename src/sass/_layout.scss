@@ -1,0 +1,61 @@
+.container {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: $gap;
+  padding-left: $gap;
+
+  @include lg {
+    max-width: 1340px + $container-offset;
+  }
+}
+
+.section {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+
+  &.is-large {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.box {
+  background: $grey;
+  padding: 1.5rem 1.25rem;
+
+  @include lg {
+    padding: 2rem 2.5rem;
+    height: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -$gap;
+
+  @include md-only {
+    margin-left: -1.5rem;
+  }
+
+  @include lg {
+    margin-left: -($gap * 2);
+  }
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  padding-left: $gap;
+
+  @include md-only {
+    padding-left: 1.5rem;
+  }
+
+  @include lg {
+    padding-left: ($gap * 2);
+  }
+}

@@ -1,0 +1,29 @@
+#hostings {
+  @include lg {
+    order: -1;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+
+  .box {
+    @include until-lg {
+      background: none;
+    }
+
+    @include lg {
+      border-radius: 18px;
+    }
+  }
+
+  .col {
+    @include sm {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include md {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+  }
+}

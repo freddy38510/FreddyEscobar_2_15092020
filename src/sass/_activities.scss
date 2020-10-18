@@ -1,0 +1,125 @@
+#activities {
+  .row {
+    padding-top: 0.375rem;
+  }
+
+  .col {
+    height: 100%;
+
+    @include sm {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include md {
+      height: auto;
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    @include md-only {
+      margin-bottom: 2rem;
+    }
+
+    @include lg {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .col:nth-child(even) {
+    @include sm {
+      order: -1;
+    }
+
+    @include md {
+      order: unset;
+    }
+
+    .is-flex {
+      height: 100%;
+
+      > div {
+        img {
+          @include md {
+            object-position: 0 25%;
+          }
+        }
+
+        &:nth-child(1) {
+          @include md {
+            height: 58.33333%;
+          }
+
+          @include md-only {
+            padding-bottom: 1rem;
+          }
+
+          @include lg {
+            padding-bottom: 1.25rem;
+          }
+        }
+
+        &:nth-child(2) {
+          @include md {
+            height: 41.6667%;
+          }
+
+          @include md-only {
+            padding-top: 1rem;
+          }
+
+          @include lg {
+            padding-top: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .col:nth-child(1) {
+    @include md-only {
+      height: 405px;
+    }
+    @include lg {
+      height: 485px;
+    }
+  }
+
+  .col:nth-child(4) {
+    .is-flex > div {
+      &:nth-child(1) {
+        @include md-only {
+          height: calc(58.33333% - 2rem);
+        }
+
+        @include lg {
+          height: calc(58.33333% - 2.5rem);
+        }
+      }
+      &:nth-child(2) {
+        @include md-only {
+          height: calc(41.6667% + 2rem);
+        }
+
+        @include lg {
+          height: calc(41.6667% + 2.5rem);
+        }
+      }
+    }
+  }
+
+  .card {
+    height: 100%;
+  }
+
+  img {
+    @include md {
+      height: 0;
+      object-position: unset;
+    }
+  }
+}
+
+#fort-de-pomegues img {
+  object-position: 0 42.5%;
+}

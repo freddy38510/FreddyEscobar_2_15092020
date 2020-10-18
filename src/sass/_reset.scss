@@ -37,7 +37,8 @@ section {
 }
 
 /* Reset list */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -52,6 +53,20 @@ textarea {
 
 fieldset {
   border: none;
+  min-width: 0;
+}
+
+/* Hack for Mozilla */
+body:not(:-moz-handler-blocked) fieldset {
+  // display: table-cell;
+}
+
+legend {
+  display: table;
+}
+
+legend + label {
+  // -webkit-margin-top-collapse: separate;
 }
 
 /* Reset box sizing */

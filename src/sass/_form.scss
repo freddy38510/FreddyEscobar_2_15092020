@@ -1,23 +1,41 @@
+form {
+  padding-top: 1.125rem;
+}
+
 .field {
   font-size: 1.125rem;
   align-items: center;
   display: flex;
   position: relative;
-  margin-bottom: 1em;
   width: 100%;
+  margin-bottom: 1em;
+
+  @include lg {
+    font-size: 1.125rem;
+  }
 
   &.has-icon {
     .input {
       padding: 0.5rem 0.75em 0.5em 3.75em;
+      transform: perspective(1px) translateZ(0);
+      transition-duration: 0.3s;
+      transition-property: color, background-color;
+
+      + .icon {
+        transform: perspective(1px) translateZ(0);
+        transition-duration: 0.3s;
+        transition-property: color, background-color;
+      }
     }
+
     .input:hover,
     .input:focus,
     .input:active {
       + .icon {
-        background: adjust-color(#f2f2f2, $lightness: -6%);
+        background: adjust-color($grey, $lightness: -6%);
       }
     }
-    &.has-addon {
+    &.has-button {
       .input {
         padding: 0.5em 1.5em 0.5em 3.75em;
         border-radius: 15px 0 0 15px;
@@ -34,10 +52,18 @@
     border-radius: 15px 0 0 15px;
   }
 
-  &.has-addon > button {
+  &.has-button > button {
     align-self: stretch;
     margin: 0 0 0 -15px;
     border-radius: 15px;
+
+    @include sm {
+      border-radius: 0 15px 15px 0;
+    }
+
+    @include md {
+      font-size: 1.125rem;
+    }
   }
 }
 
@@ -45,21 +71,122 @@
   font-size: 1.125rem;
   line-height: 1.75;
   padding: 0.5em 0.75em;
-  border: 1px solid #f2f2f2;
+  border: 1px solid $grey;
   border-radius: 12px;
   max-width: 100%;
   width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
 }
 
 .input:hover,
 .input:focus,
 .input:active {
-  border-color: adjust-color(#f2f2f2, $lightness: -6%);
+  border-color: adjust-color($grey, $lightness: -6%);
 }
 
-@include tablet {
+@include sm {
   .input,
   .field {
     width: auto;
   }
+}
+
+.field.has-buttons-list {
+  flex-direction: column;
+  align-items: stretch;
+
+  @include md {
+    flex-direction: row;
+    margin-top: 0.9375rem;
+  }
+
+  ul {
+    margin-bottom: -0.75rem;
+    margin-right: -0.75rem;
+    @include md {
+      margin-left: 2rem;
+    }
+  }
+
+  .button {
+    margin-bottom: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  @include md {
+    .button {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.checkbox.button {
+  box-sizing: border-box;
+  padding-left: 2.3125rem;
+  height: 3.125rem;
+  margin-left: 1.5rem;
+  border-radius: 0 24px 24px 0;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    left: 0;
+    right: -2px;
+    bottom: -2px;
+    background: $blue-lighter;
+    border-radius: 0 24px 24px 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $grey-darker;
+
+    &:before {
+      transform: scaleX(1);
+    }
+  }
+
+  .circled-icon {
+    background: $blue-lighter;
+    color: $blue;
+    position: absolute;
+    left: -1.625rem;
+    top: -2px;
+    bottom: 0;
+    border-radius: 100%;
+    height: 3.125rem;
+    display: inline-flex;
+    width: 3.125rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.results-info {
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  border: 1px solid $grey-darker;
+  color: $blue;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 0.75rem;
 }

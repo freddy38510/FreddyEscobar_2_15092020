@@ -12,11 +12,12 @@ body {
 
 a {
   color: black;
+  cursor: pointer;
   text-decoration: none;
 }
 
 a:hover {
-  color: #0065fc;
+  color: $blue;
 }
 
 p {
@@ -28,7 +29,7 @@ p {
 
 .title {
   font-size: 1.375rem;
-  margin: 0.5em 0;
+  margin: 0.5em 0 1em 0;
   font-weight: 700;
 
   &.is-3 {
@@ -43,10 +44,10 @@ p {
 }
 
 .sub-heading {
-  margin-top: 0.8125em;
+  margin-top: -0.5625rem;
 
-  @media only screen and (min-width: 769px) {
-    margin-top: -0.1875em;
+  @include lg {
+    margin-top: -0.875rem;
     margin-bottom: 0;
   }
 }

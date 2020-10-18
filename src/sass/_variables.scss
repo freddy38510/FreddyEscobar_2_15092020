@@ -1,10 +1,13 @@
+/* Colors */
+$grey: #f2f2f2;
+$grey-darker: #d9d9d9;
+$blue: #0065fc;
+$blue-lighter: #deebff;
+
 /* Breakpoints */
 $gap: 20px;
-
-$tablet: 769px;
-$desktop: 944px + (2 * $gap);
-$widescreen: 1136px + (2 * $gap);
-$fullhd: 1328px + (2 * $gap);
-
 $container-offset: (2 * $gap);
-$container-max-width: $fullhd;
+
+$sm: 768px; // Tablet portrait (768px)
+$md: 1024px; // Tablet landscape (1024px)
+$lg: 1368px; // Desktop (1368px or 1440px)

@@ -1,66 +1,49 @@
 @import 'variables';
 
-@mixin mobile {
-  @media screen and (max-width: $tablet - 1px) {
+@mixin until-sm {
+  @media screen and (max-width: $sm - 1px), print {
     @content;
   }
 }
 
-@mixin tablet {
-  @media screen and (min-width: $tablet), print {
+@mixin sm-only {
+  @media screen and (min-width: $sm) and (max-width: $md - 1px), print {
     @content;
   }
 }
 
-@mixin tablet-only {
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+@mixin sm {
+  @media screen and (min-width: $sm), print {
     @content;
   }
 }
 
-@mixin touch {
-  @media screen and (max-width: $desktop - 1px) {
+@mixin until-md {
+  @media screen and (max-width: $md - 1px), print {
     @content;
   }
 }
 
-@mixin desktop {
-  @media screen and (min-width: $desktop) {
+@mixin md-only {
+  @media screen and (min-width: $md) and (max-width: $lg - 1px), print {
     @content;
   }
 }
 
-@mixin desktop-only {
-  @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px) {
+@mixin md {
+  @media screen and (min-width: $md), print {
     @content;
   }
 }
 
-@mixin until-widescreen {
-  @media screen and (max-width: $widescreen - 1px) {
+@mixin until-lg {
+  @media screen and (max-width: $lg - 1px), print {
     @content;
   }
 }
 
-@mixin widescreen {
-  @media screen and (min-width: $widescreen) {
-    @content;
-  }
-}
-@mixin widescreen-only {
-  @media screen and (min-width: $widescreen) and (max-width: $fullhd - 1px) {
-    @content;
-  }
-}
-
-@mixin until-fullhd {
-  @media screen and (max-width: $fullhd - 1px) {
-    @content;
-  }
-}
-
-@mixin fullhd {
-  @media screen and (min-width: $fullhd) {
+@mixin lg {
+  @media screen and (min-width: $lg), print {
     @content;
   }
 }
