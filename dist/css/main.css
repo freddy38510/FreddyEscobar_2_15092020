@@ -606,7 +606,7 @@ form {
 .footer-links-section ul li:not(:last-child) {
   margin-bottom: 0.75rem;
 }
-@media screen and (min-width: 1368px), print {
+@media screen and (min-width: 1360px), print {
   .sub-heading {
     margin-top: -0.875rem;
     margin-bottom: 0;
@@ -674,7 +674,7 @@ form {
     margin-bottom: 2rem;
   }
 }
-@media screen and (min-width: 768px), print {
+@media screen and (min-width: 688px), print {
   .is-hidden-sm {
     display: none;
   }
@@ -732,7 +732,7 @@ form {
     width: 50%;
   }
 }
-@media screen and (max-width: 767px), print {
+@media screen and (max-width: 687px), print {
   .is-hidden-until-sm {
     display: none;
   }
@@ -796,7 +796,7 @@ form {
     width: 33.333333%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px), print {
+@media screen and (min-width: 688px) and (max-width: 1023px), print {
   .card {
     margin-bottom: 1rem;
   }
@@ -805,7 +805,7 @@ form {
     max-width: 50%;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1367px), print {
+@media screen and (min-width: 1024px) and (max-width: 1359px), print {
   .card {
     margin-bottom: 1.25rem;
   }
@@ -838,7 +838,7 @@ form {
     height: calc(41.6667% + 2rem);
   }
 }
-@media screen and (max-width: 1367px), print {
+@media screen and (max-width: 1359px), print {
   #hostings .box {
     background: none;
   }
