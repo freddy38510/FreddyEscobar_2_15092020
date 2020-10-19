@@ -7,7 +7,8 @@
   "scripts": {
     "build": "gulp",
     "watch": "gulp watch",
-    "stylelint-check": "stylelint-config-prettier-check"
+    "stylelint-check": "stylelint-config-prettier-check",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": [
     "last 2 chrome version",
@@ -20,6 +21,7 @@
     "cssnano": "4.1.10",
     "del": "6.0.0",
     "fibers": "5.0.0",
+    "gh-pages": "^3.1.0",
     "gulp": "4.0.2",
     "gulp-postcss": "9.0.0",
     "gulp-rename": "2.0.0",
