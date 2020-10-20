@@ -8,8 +8,8 @@
   outline: 0;
   text-decoration: none;
   background: #0069ed;
-  color: #fff;
-  font-family: 'Raleway';
+  color: white;
+  font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -29,19 +29,21 @@
 
 .button:hover,
 .button:focus {
+  color: white;
   background: adjust-color(#0069ed, $lightness: -4%);
   border-color: transparent;
 }
 
 .button.is-text {
-  background: none;
+  background: transparent;
   color: $blue;
-  border-color: transparent;
+  border: none;
+  padding: calc(0.5em + 2px) calc(0.875em + 2px);
 
   &:hover,
   &:focus {
     background: $blue-lighter;
-    border-color: transparent;
+    color: $blue;
   }
 }
 

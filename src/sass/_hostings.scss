@@ -6,11 +6,11 @@
   }
 
   .box {
-    @include until-lg {
-      background: none;
-    }
+    background: none;
 
     @include lg {
+      background: $grey;
+      color: black;
       border-radius: 18px;
     }
   }

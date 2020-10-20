@@ -11,13 +11,15 @@ body {
 }
 
 a {
-  color: black;
   cursor: pointer;
   text-decoration: none;
+  color: black;
+  background: transparent;
 }
 
 a:hover {
   color: $blue;
+  background: transparent;
 }
 
 p {

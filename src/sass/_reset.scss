@@ -1,7 +1,6 @@
 /* Reset blocks */
 html,
 body,
-p,
 ol,
 ul,
 li,
@@ -10,9 +9,6 @@ dt,
 dd,
 blockquote,
 figure,
-fieldset,
-legend,
-textarea,
 pre,
 iframe,
 hr,
@@ -46,8 +42,11 @@ ol {
 button,
 input,
 select,
+fieldset,
+legend,
 textarea {
   margin: 0;
+  padding: 0;
   outline: 0;
 }
 
@@ -56,17 +55,8 @@ fieldset {
   min-width: 0;
 }
 
-/* Hack for Mozilla */
-body:not(:-moz-handler-blocked) fieldset {
-  // display: table-cell;
-}
-
 legend {
   display: table;
-}
-
-legend + label {
-  // -webkit-margin-top-collapse: separate;
 }
 
 /* Reset box sizing */

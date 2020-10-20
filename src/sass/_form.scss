@@ -32,9 +32,11 @@ form {
     .input:focus,
     .input:active {
       + .icon {
+        color: black;
         background: adjust-color($grey, $lightness: -6%);
       }
     }
+
     &.has-button {
       .input {
         padding: 0.5em 1.5em 0.5em 3.75em;
@@ -132,7 +134,7 @@ form {
   transition-property: color;
   transition-duration: 0.3s;
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -140,6 +142,7 @@ form {
     left: 0;
     right: -2px;
     bottom: -2px;
+    color: $blue;
     background: $blue-lighter;
     border-radius: 0 24px 24px 0;
     transform: scaleX(0);
@@ -154,7 +157,7 @@ form {
   &:active {
     border-color: $grey-darker;
 
-    &:before {
+    &::before {
       transform: scaleX(1);
     }
   }
@@ -185,6 +188,7 @@ form {
   border-radius: 100%;
   border: 1px solid $grey-darker;
   color: $blue;
+  background: transparent;
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
