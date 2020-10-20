@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>Reservia</title>
-    <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve." />
+    <meta
+      name="description"
+      content="Trouvez votre hébergement pour des vacances de rêve."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/main.css" />
     <link
@@ -62,7 +65,11 @@
               </span>
               <button class="button" id="search-location">
                 <span class="icon is-hidden-sm">
-                  <i class="fas fa-search" title="Rechercher" data-fa-title-id="search"></i>
+                  <i
+                    class="fas fa-search"
+                    title="Rechercher"
+                    data-fa-title-id="search"
+                  ></i>
                 </span>
                 <span class="is-hidden-until-sm">Rechercher</span>
               </button>
@@ -477,24 +484,4 @@
       </div>
     </footer>
   </body>
-
-  <script>
-    const card = document.querySelector('.card')
-    const mainLink = card.querySelector('.title a')
-    const clickableElements = Array.from(card.querySelectorAll('a'))
-
-    clickableElements.forEach((ele) =>
-      ele.addEventListener('click', (e) => e.stopPropagation())
-    )
-
-    function handleClick(event) {
-      const noTextSelected = !window.getSelection().toString()
-
-      if (noTextSelected) {
-        mainLink.click()
-      }
-    }
-
-    card.addEventListener('click', handleClick)
-  </script>
 </html>
