@@ -15,14 +15,18 @@
 
 main {
   > .container {
-    @include until-lg {
-      padding: 0;
+    padding-right: 0;
+    padding-left: 0;
+
+    @include lg {
+      padding-right: $gap-lg;
+      padding-left: $gap-lg;
     }
 
     > .row {
-        @include lg {
-            margin-bottom: 2rem;
-        }
+      @include lg {
+        margin-bottom: 2rem;
+      }
     }
   }
 }

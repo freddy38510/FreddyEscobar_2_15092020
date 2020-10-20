@@ -15,9 +15,6 @@
       height: auto;
       flex: 0 0 25%;
       max-width: 25%;
-    }
-
-    @include md-only {
       margin-bottom: 2rem;
     }
 
@@ -48,9 +45,6 @@
         &:nth-child(1) {
           @include md {
             height: 58.33333%;
-          }
-
-          @include md-only {
             padding-bottom: 1rem;
           }
 
@@ -62,9 +56,6 @@
         &:nth-child(2) {
           @include md {
             height: 41.6667%;
-          }
-
-          @include md-only {
             padding-top: 1rem;
           }
 
@@ -77,7 +68,7 @@
   }
 
   .col:nth-child(1) {
-    @include md-only {
+    @include md {
       height: 405px;
     }
     @include lg {
@@ -88,7 +79,7 @@
   .col:nth-child(4) {
     .is-flex > div {
       &:nth-child(1) {
-        @include md-only {
+        @include md {
           height: calc(58.33333% - 2rem);
         }
 
@@ -97,7 +88,7 @@
         }
       }
       &:nth-child(2) {
-        @include md-only {
+        @include md {
           height: calc(41.6667% + 2rem);
         }
 

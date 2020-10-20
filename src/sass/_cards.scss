@@ -8,11 +8,11 @@
   color: black;
   margin-bottom: 0.75rem;
 
-  @include sm-only {
+  @include sm {
     margin-bottom: 1rem;
   }
 
-  @include md-only {
+  @include md {
     margin-bottom: 1.25rem;
   }
 

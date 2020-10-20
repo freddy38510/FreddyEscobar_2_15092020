@@ -6,7 +6,8 @@ $blue-lighter: #deebff;
 
 /* Breakpoints */
 $gap: 1.25rem;
-$container-offset: (2 * $gap);
+$gap-md: 1.5rem;
+$gap-lg: 2.5rem;
 
 $sm: 688px; // Tablet portrait (768px)
 $md: 1024px; // Tablet landscape (1024px)

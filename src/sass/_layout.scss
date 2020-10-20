@@ -7,7 +7,7 @@
   padding-left: $gap;
 
   @include lg {
-    max-width: (1340 / 16) * 1rem + $container-offset;
+    max-width: (1340 / 16) * 1rem + ($gap-lg * 2);
   }
 }
 
@@ -23,10 +23,11 @@
 
 .box {
   background: $grey;
-  padding: 1.5rem 1.25rem;
+  color: black;
+  padding: 1.5rem $gap;
 
   @include lg {
-    padding: 2rem 2.5rem;
+    padding: 2rem $gap-lg;
     height: 100%;
   }
 }
@@ -37,24 +38,25 @@
   flex-wrap: wrap;
   margin-left: -$gap;
 
-  @include md-only {
-    margin-left: -1.5rem;
+  @include md {
+    margin-left: -$gap-md;
   }
 
   @include lg {
-    margin-left: -($gap * 2);
+    margin-left: -$gap-lg;
   }
 }
+
 .col {
   position: relative;
   width: 100%;
   padding-left: $gap;
 
-  @include md-only {
-    padding-left: 1.5rem;
+  @include md {
+    padding-left: $gap-md;
   }
 
   @include lg {
-    padding-left: ($gap * 2);
+    padding-left: $gap-lg;
   }
 }

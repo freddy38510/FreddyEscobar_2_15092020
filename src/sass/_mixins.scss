@@ -1,49 +1,31 @@
 @import 'variables';
 
-@mixin until-sm {
-  @media screen and (max-width: $sm - 1px), print {
-    @content;
-  }
-}
-
 @mixin sm-only {
-  @media screen and (min-width: $sm) and (max-width: $md - 1px), print {
+  @media (min-width: $sm) and (max-width: $md - 1px) {
     @content;
   }
 }
 
 @mixin sm {
-  @media screen and (min-width: $sm), print {
-    @content;
-  }
-}
-
-@mixin until-md {
-  @media screen and (max-width: $md - 1px), print {
+  @media (min-width: $sm) {
     @content;
   }
 }
 
 @mixin md-only {
-  @media screen and (min-width: $md) and (max-width: $lg - 1px), print {
+  @media (min-width: $md) and (max-width: $lg - 1px) {
     @content;
   }
 }
 
 @mixin md {
-  @media screen and (min-width: $md), print {
-    @content;
-  }
-}
-
-@mixin until-lg {
-  @media screen and (max-width: $lg - 1px), print {
+  @media (min-width: $md) {
     @content;
   }
 }
 
 @mixin lg {
-  @media screen and (min-width: $lg), print {
+  @media (min-width: $lg) {
     @content;
   }
 }
