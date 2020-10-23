@@ -1,116 +1,99 @@
-#activities {
-  .row {
-    padding-top: 0.375rem;
+.activity-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: -0.375rem 0 0.75rem;
+
+  @include sm {
+    margin: -0.5rem 0 0.875rem;
   }
 
-  .col {
-    height: 100%;
-
-    @include sm {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-
-    @include md {
-      height: auto;
-      flex: 0 0 25%;
-      max-width: 25%;
-      margin-bottom: 2rem;
-    }
-
-    @include lg {
-      margin-bottom: 2.5rem;
-    }
+  @include md {
+    height: 485px;
+    margin: -1rem 0 1rem;
   }
 
-  .col:nth-child(even) {
-    @include sm {
-      order: -1;
-    }
-
-    @include md {
-      order: unset;
-    }
-
-    .is-flex {
-      height: 100%;
-
-      > div {
-        img {
-          @include md {
-            object-position: 0 25%;
-          }
-        }
-
-        &:nth-child(1) {
-          @include md {
-            height: 58.33333%;
-            padding-bottom: 1rem;
-          }
-
-          @include lg {
-            padding-bottom: 1.25rem;
-          }
-        }
-
-        &:nth-child(2) {
-          @include md {
-            height: 41.6667%;
-            padding-top: 1rem;
-          }
-
-          @include lg {
-            padding-top: 1.25rem;
-          }
-        }
-      }
-    }
-  }
-
-  .col:nth-child(1) {
-    @include md {
-      height: 405px;
-    }
-    @include lg {
-      height: 485px;
-    }
-  }
-
-  .col:nth-child(4) {
-    .is-flex > div {
-      &:nth-child(1) {
-        @include md {
-          height: calc(58.33333% - 2rem);
-        }
-
-        @include lg {
-          height: calc(58.33333% - 2.5rem);
-        }
-      }
-      &:nth-child(2) {
-        @include md {
-          height: calc(41.6667% + 2rem);
-        }
-
-        @include lg {
-          height: calc(41.6667% + 2.5rem);
-        }
-      }
-    }
-  }
-
-  .card {
-    height: 100%;
-  }
-
-  img {
-    @include md {
-      height: 0;
-      object-position: unset;
-    }
+  @include lg {
+    margin: -1.25rem 0 1.25rem;
   }
 }
 
-#fort-de-pomegues img {
-  object-position: 0 42.5%;
+.activity {
+  background: #fff;
+  color: #000;
+  display: flex;
+  flex-grow: 1;
+  height: 208px;
+  min-height: 0;
+  padding: 0.75rem 0;
+
+  @include sm {
+    padding: 0.875rem 0;
+  }
+
+  @include md {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  @include lg {
+    padding: 1.25rem 0;
+  }
+
+  figure {
+    border-radius: 18px;
+    box-shadow: 0 2px 24px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  img {
+    border-radius: 18px 18px 0 0;
+    flex-grow: 1;
+    min-height: 0;
+    object-fit: cover;
+    object-position: 0 20%;
+    width: 100%;
+  }
+
+  .adjust-position {
+    object-position: 0 43.5%;
+  }
+
+  figcaption {
+    padding: 1.25rem 1.25rem 1rem;
+  }
+
+  &.is-5-md {
+    @include md {
+      height: 41.666667%;
+    }
+  }
+
+  &.is-5-md.has-extra-height {
+    @include md {
+      height: calc(41.666667% + 2rem);
+    }
+
+    @include lg {
+      height: calc(41.666667% + 2.5rem);
+    }
+  }
+
+  &.is-7-md {
+    @include md {
+      height: 58.333333%;
+    }
+  }
+
+  &.is-7-md.has-less-height {
+    @include md {
+      height: calc(58.333333% - 2rem);
+    }
+
+    @include lg {
+      height: calc(58.333333% - 2.5rem);
+    }
+  }
 }

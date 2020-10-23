@@ -19,11 +19,11 @@
   align-items: baseline;
 }
 
-.has-text-large {
+.is-text-large {
   font-size: 1.125rem;
 }
 
-.has-text-small {
+.is-text-small {
   font-size: 0.875rem;
 }
 
@@ -33,7 +33,14 @@
 
 .has-background-grey {
   background: $grey;
-  color: black;
+  color: #000;
+}
+
+.has-background-grey-lg {
+  @include lg {
+    background: $grey;
+    color: #000;
+  }
 }
 
 .is-hidden {
@@ -67,6 +74,12 @@
   border-radius: 18px;
 }
 
+.is-rounded-lg {
+  @include lg {
+    border-radius: 18px;
+  }
+}
+
 .is-right {
   float: right;
 }
@@ -75,23 +88,39 @@
   clear: both;
 }
 
-.stars {
-  font-size: 0.75rem;
+.fa-star {
+  background: transparent;
+  color: $grey-darker;
 
-  .fa-star {
-    color: $grey-darker;
+  &.is-active {
     background: transparent;
-
-    &.is-active {
-      color: $blue;
-      background: transparent;
-    }
+    color: $blue;
   }
 }
 
 .more {
   @include lg {
-    margin-top: 0.5em;
     margin-bottom: 0.833333em;
+    margin-top: 0.5em;
+  }
+}
+
+.mb-2-lg {
+  @include lg {
+    margin-bottom: 2rem;
+  }
+}
+
+.is-clickable {
+  position: relative;
+
+  .main-link::after {
+    content: '';
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }

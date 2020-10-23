@@ -8,25 +8,17 @@
 @import 'cards';
 @import 'layout';
 @import 'header';
-@import 'popular';
-@import 'hostings';
 @import 'activities';
 @import 'footer';
 
 main {
   > .container {
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
 
     @include lg {
-      padding-right: $gap;
       padding-left: $gap;
-    }
-
-    > .row {
-      @include lg {
-        margin-bottom: 2rem;
-      }
+      padding-right: $gap;
     }
   }
 }

@@ -1,4 +1,7 @@
-#footer {
+.footer {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+
   @include sm {
     padding-bottom: 2rem;
   }
@@ -8,24 +11,22 @@
       display: flex;
       flex-wrap: wrap;
     }
-
-    .footer-links-section {
-      @include sm {
-        width: 50%;
-      }
-
-      @include md {
-        width: 33.333333%;
-      }
-    }
   }
 }
 
-.footer-links-section {
+.links-section {
   padding: 1.25rem 0.75rem;
 
+  @include sm {
+    width: 50%;
+  }
+
+  @include md {
+    width: 33.333333%;
+  }
+
   .title {
-    margin: 0 0 1.25rem 0;
+    margin: 0 0 1.25rem;
   }
 
   ul li:not(:last-child) {

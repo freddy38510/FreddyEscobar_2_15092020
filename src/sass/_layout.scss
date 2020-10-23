@@ -1,34 +1,32 @@
 .container {
-  position: relative;
   flex-grow: 1;
-  width: 100%;
   margin: 0 auto;
-  padding-right: $gap;
   padding-left: $gap;
+  padding-right: $gap;
+  position: relative;
+  width: 100%;
 
   @include lg {
-    max-width: (1340 / 16) * 1rem + ($gap-lg * 2);
+    max-width: (1340 / 16) * 1rem + ($gap * 2);
   }
 }
 
 .section {
-  padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
 
   &.is-large {
-    padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
   }
 }
 
 .box {
-  background: $grey;
-  color: black;
   padding: 1.5rem $gap;
 
   @include lg {
-    padding: 2rem $gap-lg;
     height: 100%;
+    padding: 2rem $gap-lg;
   }
 }
 
@@ -48,9 +46,9 @@
 }
 
 .col {
+  padding-left: $gap;
   position: relative;
   width: 100%;
-  padding-left: $gap;
 
   @include md {
     padding-left: $gap-md;
@@ -58,5 +56,53 @@
 
   @include lg {
     padding-left: $gap-lg;
+  }
+}
+
+.col.is-6-sm {
+  @include sm {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.col.is-3-md {
+  @include md {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.col.is-4-md {
+  @include md {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+.col.is-4-lg {
+  @include lg {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+.col.is-8-lg {
+  @include lg {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+
+.col.is-12-lg {
+  @include lg {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.is-first-lg {
+  @include lg {
+    order: -1;
   }
 }

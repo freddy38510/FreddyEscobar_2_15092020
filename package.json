@@ -7,6 +7,7 @@
   "scripts": {
     "build": "gulp",
     "watch": "gulp watch",
+    "lint:css": "stylelint src/sass/**/*.scss",
     "stylelint-check": "stylelint-config-prettier-check",
     "deploy": "gh-pages -d dist"
   },
@@ -31,8 +32,7 @@
     "prettier": "2.1.2",
     "sass": "1.27.0",
     "stylelint": "13.7.2",
-    "stylelint-config-prettier": "8.0.2",
-    "stylelint-config-standard": "20.0.0"
+    "stylelint-config-sass-guidelines": "7.1.0"
   },
   "dependencies": {}
 }
