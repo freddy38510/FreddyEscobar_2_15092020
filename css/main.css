@@ -300,11 +300,11 @@ form {
 }
 .field.has-icon > .icon {
   border-radius: 15px 0 0 15px;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   padding: 1.25em;
   position: absolute;
-  top: -1px;
+  top: 0;
 }
 .field.has-button > button {
   align-self: stretch;
@@ -335,11 +335,11 @@ form {
   transition-property: color, background-color;
 }
 
-.input:hover .icon,
-.input:focus .icon,
-.input:active .icon {
+.input:hover + .icon,
+.input:focus + .icon,
+.input:active + .icon {
   background: #e3e3e3;
-  color: #fff;
+  color: #000;
 }
 
 .field.has-buttons-list {
