@@ -25,11 +25,11 @@ form {
 
   &.has-icon > .icon {
     border-radius: 15px 0 0 15px;
-    bottom: -1px;
+    bottom: 0;
     left: 0;
     padding: 1.25em;
     position: absolute;
-    top: -1px;
+    top: 0;
   }
 
   &.has-button > button {
@@ -81,9 +81,9 @@ form {
 .input:hover,
 .input:focus,
 .input:active {
-  .icon {
+  + .icon {
     background: adjust-color($grey, $lightness: -6%);
-    color: #fff;
+    color: #000;
   }
 }
 
