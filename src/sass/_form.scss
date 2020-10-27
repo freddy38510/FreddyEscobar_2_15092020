@@ -7,6 +7,7 @@ form {
   display: flex;
   font-size: 1.125rem;
   margin-bottom: 1em;
+  max-width: 26rem;
   position: relative;
   width: 100%;
 
@@ -15,7 +16,6 @@ form {
   }
 
   &.has-icon .input {
-    border-radius: 15px 0 0 15px;
     padding: 0.5rem 0.75em 0.5em 3.75em;
     padding: 0.5em 1.5em 0.5em 3.75em;
     transform: perspective(1px) translateZ(0);
@@ -35,7 +35,10 @@ form {
   &.has-button > button {
     align-self: stretch;
     border-radius: 15px;
-    margin: 0 0 0 -15px;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 
     @include sm {
       border-radius: 0 15px 15px 0;
@@ -44,6 +47,10 @@ form {
     @include md {
       font-size: 1.125rem;
     }
+  }
+
+  &.is-fullwidth {
+    max-width: 100%;
   }
 }
 
@@ -63,13 +70,6 @@ form {
 .input:focus,
 .input:active {
   border-color: adjust-color($grey, $lightness: -6%);
-}
-
-@include sm {
-  .input,
-  .field {
-    width: auto;
-  }
 }
 
 .input .icon {
