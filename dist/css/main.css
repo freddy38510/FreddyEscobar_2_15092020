@@ -223,7 +223,7 @@ p {
 }
 
 .button {
-  background: #0069ed;
+  background: #0065fc;
   border: 2px solid #0065fc;
   border-radius: 12px;
   color: #fff;
@@ -243,17 +243,9 @@ p {
   transition-property: color, background-color;
 }
 
-.button:first-child {
-  margin-left: 0;
-}
-
-.button:last-child {
-  margin-right: 0;
-}
-
 .button:hover,
 .button:focus {
-  background: #0060d9;
+  background: #005de8;
   border-color: transparent;
   color: #fff;
 }

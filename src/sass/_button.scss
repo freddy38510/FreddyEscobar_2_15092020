@@ -1,5 +1,5 @@
 .button {
-  background: #0069ed;
+  background: $blue;
   border: 2px solid $blue;
   border-radius: 12px;
   color: #fff;
@@ -19,17 +19,9 @@
   transition-property: color, background-color;
 }
 
-.button:first-child {
-  margin-left: 0;
-}
-
-.button:last-child {
-  margin-right: 0;
-}
-
 .button:hover,
 .button:focus {
-  background: adjust-color(#0069ed, $lightness: -4%);
+  background: adjust-color($blue, $lightness: -4%);
   border-color: transparent;
   color: #fff;
 }
