@@ -279,11 +279,11 @@ form {
   display: flex;
   font-size: 1.125rem;
   margin-bottom: 1em;
+  max-width: 26rem;
   position: relative;
   width: 100%;
 }
 .field.has-icon .input {
-  border-radius: 15px 0 0 15px;
   padding: 0.5rem 0.75em 0.5em 3.75em;
   padding: 0.5em 1.5em 0.5em 3.75em;
   transform: perspective(1px) translateZ(0);
@@ -301,7 +301,13 @@ form {
 .field.has-button > button {
   align-self: stretch;
   border-radius: 15px;
-  margin: 0 0 0 -15px;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.field.is-fullwidth {
+  max-width: 100%;
 }
 
 .input {
@@ -321,6 +327,7 @@ form {
 .input:active {
   border-color: #e3e3e3;
 }
+
 .input .icon {
   transform: perspective(1px) translateZ(0);
   transition-duration: 0.3s;
@@ -622,10 +629,6 @@ main > .container {
   }
   .field.has-button > button {
     border-radius: 0 15px 15px 0;
-  }
-  .input,
-.field {
-    width: auto;
   }
   .card {
     margin-bottom: 1rem;
