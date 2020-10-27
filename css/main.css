@@ -626,6 +626,9 @@ main > .container {
   .is-inline-sm {
     display: inline;
   }
+  .field.has-icon .input {
+    padding-right: 7.2em;
+  }
   .field.has-button > button {
     border-radius: 0 15px 15px 0;
   }
@@ -677,6 +680,9 @@ main > .container {
 }
 
 @media (min-width: 1024px) {
+  .field.has-icon .input {
+    padding-right: 8em;
+  }
   .field.has-button > button {
     font-size: 1.125rem;
   }
