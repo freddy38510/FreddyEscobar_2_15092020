@@ -21,7 +21,7 @@
 
 .button:hover,
 .button:focus {
-  background: adjust-color($blue, $lightness: -4%);
+  background: adjust-color($blue, $lightness: -6%);
   border-color: transparent;
   color: #fff;
 }

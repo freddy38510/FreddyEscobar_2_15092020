@@ -7,7 +7,6 @@ form {
   display: flex;
   font-size: 1.125rem;
   margin-bottom: 1em;
-  max-width: 26rem;
   position: relative;
   width: 100%;
 
@@ -15,37 +14,10 @@ form {
     font-size: 1.125rem;
   }
 
-  &.has-icon .input {
-    padding: 0.5em 3.2em 0.5em 3.75em;
-    transform: perspective(1px) translateZ(0);
-    transition-duration: 0.3s;
-    transition-property: color, background-color;
-
-    @include sm {
-      padding-right: 7.2em;
-    }
-
-    @include md {
-      padding-right: 8em;
-    }
-  }
-
-  &.has-icon > .icon {
-    border-radius: 15px 0 0 15px;
-    bottom: 0;
-    left: 0;
-    padding: 1.25em;
-    position: absolute;
-    top: 0;
-  }
-
-  &.has-button > button {
+  &.has-button .button {
     align-self: stretch;
     border-radius: 15px;
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+    margin-left: -20px;
 
     @include sm {
       border-radius: 0 15px 15px 0;
@@ -56,8 +28,27 @@ form {
     }
   }
 
-  &.is-fullwidth {
-    max-width: 100%;
+  &.has-button .input {
+    border-radius: 15px 0 0 15px;
+    padding-right: calc(1em + 20px);
+  }
+}
+
+.has-icon-left {
+  .input {
+    padding-left: 3.75em;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: color, background-color;
+  }
+
+  > .icon {
+    border-radius: 15px 0 0 15px;
+    bottom: 0;
+    left: 0;
+    padding: 1.25em;
+    position: absolute;
+    top: 0;
   }
 }
 
@@ -79,7 +70,7 @@ form {
   border-color: adjust-color($grey, $lightness: -6%);
 }
 
-.input .icon {
+.input ~ .icon {
   transform: perspective(1px) translateZ(0);
   transition-duration: 0.3s;
   transition-property: color, background-color;
