@@ -245,7 +245,7 @@ p {
 
 .button:hover,
 .button:focus {
-  background: #005de8;
+  background: #0059dd;
   border-color: transparent;
   color: #fff;
 }
@@ -279,34 +279,32 @@ form {
   display: flex;
   font-size: 1.125rem;
   margin-bottom: 1em;
-  max-width: 26rem;
   position: relative;
   width: 100%;
 }
-.field.has-icon .input {
-  padding: 0.5em 3.2em 0.5em 3.75em;
+.field.has-button .button {
+  align-self: stretch;
+  border-radius: 15px;
+  margin-left: -20px;
+}
+.field.has-button .input {
+  border-radius: 15px 0 0 15px;
+  padding-right: calc(1em + 20px);
+}
+
+.has-icon-left .input {
+  padding-left: 3.75em;
   transform: perspective(1px) translateZ(0);
   transition-duration: 0.3s;
   transition-property: color, background-color;
 }
-.field.has-icon > .icon {
+.has-icon-left > .icon {
   border-radius: 15px 0 0 15px;
   bottom: 0;
   left: 0;
   padding: 1.25em;
   position: absolute;
   top: 0;
-}
-.field.has-button > button {
-  align-self: stretch;
-  border-radius: 15px;
-  bottom: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.field.is-fullwidth {
-  max-width: 100%;
 }
 
 .input {
@@ -327,7 +325,7 @@ form {
   border-color: #e3e3e3;
 }
 
-.input .icon {
+.input ~ .icon {
   transform: perspective(1px) translateZ(0);
   transition-duration: 0.3s;
   transition-property: color, background-color;
@@ -626,10 +624,7 @@ main > .container {
   .is-inline-sm {
     display: inline;
   }
-  .field.has-icon .input {
-    padding-right: 7.2em;
-  }
-  .field.has-button > button {
+  .field.has-button .button {
     border-radius: 0 15px 15px 0;
   }
   .card {
@@ -680,10 +675,7 @@ main > .container {
 }
 
 @media (min-width: 1024px) {
-  .field.has-icon .input {
-    padding-right: 8em;
-  }
-  .field.has-button > button {
+  .field.has-button .button {
     font-size: 1.125rem;
   }
   .field.has-buttons-list {
